@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    blockquote {
+      @apply p-4 my-4 bg-gray-50 border-l-4 border-gray-300;
+    }
+    blockquote p {
+        @apply text-xl italic font-medium leading-relaxed text-gray-900
+    }
+    pre {
+        @apply block p-5 border-l-[#4caf50] border-l-4 text-xs bg-[#f5f2f0] my-5 border
+    }
+    code {
+        @apply text-black font-code
+    }
+}
