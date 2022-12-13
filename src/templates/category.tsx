@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Aside from "../components/Aside/Aside";
 import ArticleItem from "../components/Article/ArticleItem";
 import Seo from "../components/Seo";
+import { getImage } from "gatsby-plugin-image";
 
 export const query = graphql`
   query Category($slug: String!) {
@@ -23,6 +24,11 @@ export const query = graphql`
             }
             thumbnail {
               url
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(formats: WEBP, width: 640)
+                }
+              }
             }
           }
         }
@@ -46,7 +52,7 @@ const Category: React.FC<any> = ({ data }) => {
               <ArticleItem
                 key={idx}
                 title={item.title}
-                thumbnail={`http://localhost:1337${item?.thumbnail?.url}`}
+                thumbnail={getImage(item.thumbnail.localFile.childImageSharp)}
                 categories={item?.category?.name}
                 description={item.seo?.metaDescription}
                 href={`/article/${item.slug}`}

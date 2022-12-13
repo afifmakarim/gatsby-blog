@@ -6,7 +6,7 @@ import * as React from "react";
 import { FaYoutube } from "@react-icons/all-files/fa/FaYoutube";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 
-import categories from "../constant/navData";
+import { categories } from "../constant/navData";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 

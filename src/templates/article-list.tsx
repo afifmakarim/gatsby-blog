@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import { PageButtons } from "../components/PageButtons";
 import Seo from "../components/Seo";
 import * as React from "react";
+import { getImage } from "gatsby-plugin-image";
 
 export const query = graphql`
   query ArticleList($limit: Int!, $skip: Int!) {
@@ -17,6 +18,7 @@ export const query = graphql`
         node {
           slug
           title
+          publishedAt(fromNow: true)
           category {
             name
           }
@@ -26,6 +28,11 @@ export const query = graphql`
           }
           thumbnail {
             url
+            localFile {
+              childImageSharp {
+                gatsbyImageData(formats: WEBP, width: 640)
+              }
+            }
           }
         }
       }
@@ -49,10 +56,13 @@ const ArticleList = ({ data }: any) => {
               <ArticleItem
                 key={idx}
                 title={item.node.title}
-                thumbnail={`http://localhost:1337${item.node.thumbnail.url}`}
+                thumbnail={getImage(
+                  item.node.thumbnail.localFile.childImageSharp
+                )}
                 categories={item?.node?.category?.name}
                 description={item.node.seo?.metaDescription}
                 href={`/article/${item.node.slug}`}
+                timestamp={item.node.publishedAt}
               />
             ))}
           </div>

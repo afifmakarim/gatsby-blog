@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.STRAPI_API_URL || "http://127.0.0.1:1337",
+        apiURL: process.env.STRAPI_API_URL || "http://vps.rojoinferno.com:1337",
         accessToken: process.env.STRAPI_TOKEN,
         collectionTypes: [
           {
