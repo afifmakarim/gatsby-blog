@@ -14,6 +14,7 @@ export const query = graphql`
           strapi_id
           slug
           articles {
+            title
             slug
             seo {
               metaDescription

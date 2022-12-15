@@ -16,4 +16,7 @@
     code {
         @apply text-black font-code
     }
+    #article-post img{
+        @apply my-4
+    }
 }

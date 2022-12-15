@@ -13,7 +13,7 @@ export default function ArticleItem({
   const cover = getImage(thumbnail);
 
   return (
-    <div className="max-w-2xl mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden border h-full">
+    <div className="max-w-2xl mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden border max-h-80">
       <GatsbyImage
         loading="eager"
         image={cover}
@@ -30,7 +30,9 @@ export default function ArticleItem({
         <h1 className="block mt-2 text-lg leading-tight font-medium text-black truncate">
           {title}
         </h1>
-        <p className="mt-2 text-slate-500 break-words h-24">{description}</p>
+        <p className="mt-2 text-slate-500 break-words h-28">
+          {description.slice(0, 100) + (description.length > 100 ? "..." : "")}
+        </p>
         <div className="">
           <div className="flex items-center justify-between">
             <Link

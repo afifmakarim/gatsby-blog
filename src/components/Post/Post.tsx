@@ -41,7 +41,7 @@ export default function Post({
           ))}
         </div>
       </header>
-      <section>
+      <section id="article-post">
         <div
           className="break-words"
           dangerouslySetInnerHTML={{

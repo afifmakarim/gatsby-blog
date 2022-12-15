@@ -22,7 +22,7 @@ export const query = graphql`
           thumbnail {
             localFile {
               childImageSharp {
-                gatsbyImageData(formats: WEBP, width: 320)
+                gatsbyImageData(formats: WEBP, width: 640)
               }
             }
           }
