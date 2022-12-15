@@ -13,7 +13,7 @@ export default function ArticleItem({
   const cover = getImage(thumbnail);
 
   return (
-    <div className="max-w-2xl mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden border max-h-80">
+    <div className="max-w-2xl mx-auto w-full bg-white rounded-xl shadow-md overflow-hidden border h-full">
       <GatsbyImage
         loading="eager"
         image={cover}
