@@ -43,7 +43,7 @@ export default function Post({
       </header>
       <section id="article-post">
         <div
-          className="break-words"
+          className="break-words whitespace-pre"
           dangerouslySetInnerHTML={{
             __html: content,
           }}
