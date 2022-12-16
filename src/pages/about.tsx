@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { stepperData } from "../constant/navData";
+import { Seo } from "../components/Seo";
 
 export default function about() {
   return (
@@ -79,3 +80,4 @@ export default function about() {
     </Layout>
   );
 }
+export const Head = () => <Seo title="About" />;

@@ -39,8 +39,6 @@ export const query = graphql`
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
     <Layout>
-      {/* <Seo seo={{ metaTitle: "Home" }} /> */}
-
       <main className="max-w-7xl mx-auto p-5 grid grid-cols-1 gap-4 md:grid-cols-4">
         <Aside />
         <Article data={data} />
@@ -59,4 +57,4 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
 export default IndexPage;
 
-export const Head = () => <Seo title="Home" />;
+export const Head = () => <Seo />;

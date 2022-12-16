@@ -125,7 +125,7 @@ export const Seo = ({ title, description, pathname, children }: any) => {
   const { siteName, defaultSeo, favicon } = strapiGlobal;
 
   const seo = {
-    title: `${title} | ${siteName}` || `${defaultSeo.metaTitle} | ${siteName}`,
+    title: title || siteName,
     description: description || defaultSeo.metaDescription,
     image: favicon.localFile.url,
   };

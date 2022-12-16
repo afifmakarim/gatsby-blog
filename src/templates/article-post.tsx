@@ -10,7 +10,7 @@ const ArticlePage = ({ data }: any) => {
   const cover = getImage(article?.thumbnail?.localFile?.childImageSharp);
   const imagePreviewArray = article?.image_preview;
   const content = article?.content?.data?.childMarkdownRemark.html;
-  const seo = article.seo;
+  const seo = article?.seo;
   return (
     <>
       <Seo title={seo.metaTitle} description={seo.metaDescription} />

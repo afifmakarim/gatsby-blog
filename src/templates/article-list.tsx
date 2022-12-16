@@ -77,4 +77,4 @@ const ArticleList = ({ data }: any) => {
 
 export default ArticleList;
 
-export const Head = () => <Seo seo={{ metaTitle: "Blog Post" }} />;
+export const Head = () => <Seo title="Blog Post" />;
