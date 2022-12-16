@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Aside from "../components/Aside/Aside";
 import ArticleItem from "../components/Article/ArticleItem";
-import Seo from "../components/Seo";
+import { Seo } from "../components/Seo";
 import { getImage } from "gatsby-plugin-image";
 
 export const query = graphql`
@@ -43,7 +43,7 @@ const Category: React.FC<any> = ({ data }) => {
 
   return (
     <Layout>
-      <Seo seo={{ metaTitle: "Category Page" }} />
+      <Seo title="Category Page" />
 
       <main className="max-w-7xl mx-auto p-5 grid grid-cols-1 gap-4 md:grid-cols-4">
         <Aside active={category} />
