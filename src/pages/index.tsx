@@ -38,23 +38,26 @@ export const query = graphql`
 
 const IndexPage: React.FC<PageProps> = ({ data }) => {
   return (
-    <Layout>
-      <main className="max-w-7xl mx-auto p-5 grid grid-cols-1 gap-4 md:grid-cols-4">
-        <Aside />
-        <Article data={data} />
-      </main>
-      <div className="max-w-7xl mx-auto flex justify-end px-5">
-        <Link
-          to="/blogs"
-          className="inline-block p-2 bg-primaryTheme text-sm text-white rounded-md"
-        >
-          Older Post
-        </Link>
-      </div>
-    </Layout>
+    <>
+      <Seo />
+      <Layout>
+        <main className="max-w-7xl mx-auto p-5 grid grid-cols-1 gap-4 md:grid-cols-4">
+          <Aside />
+          <Article data={data} />
+        </main>
+        <div className="max-w-7xl mx-auto flex justify-end px-5">
+          <Link
+            to="/blogs"
+            className="inline-block p-2 bg-primaryTheme text-sm text-white rounded-md"
+          >
+            Older Post
+          </Link>
+        </div>
+      </Layout>
+    </>
   );
 };
 
 export default IndexPage;
 
-export const Head = () => <Seo />;
+// export const Head = () => <Seo />;
