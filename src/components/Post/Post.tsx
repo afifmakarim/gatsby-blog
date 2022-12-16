@@ -37,7 +37,7 @@ export default function Post({
           ))}
         </div>
       </header>
-      <section id="article-post" className="prose ">
+      <section id="article-post" className="prose max-w-screen-md">
         <div
           dangerouslySetInnerHTML={{
             __html: content,
