@@ -137,7 +137,7 @@ export const Seo = ({ title, description, pathname, children }: any) => {
       <meta name="image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
-      {/* <meta name="twitter:url" content={seo.url} /> */}
+      <meta name="twitter:url" content={process.env.GATSBY_BASE_URL} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
