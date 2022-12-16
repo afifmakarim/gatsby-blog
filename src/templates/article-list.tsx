@@ -3,7 +3,7 @@ import ArticleItem from "../components/Article/ArticleItem";
 import Aside from "../components/Aside/Aside";
 import Layout from "../components/Layout";
 import { PageButtons } from "../components/PageButtons";
-import Seo from "../components/Seo";
+import { Seo } from "../components/Seo";
 import * as React from "react";
 import { getImage } from "gatsby-plugin-image";
 

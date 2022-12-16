@@ -3,16 +3,17 @@ import Layout from "../components/Layout";
 import { getImage } from "gatsby-plugin-image";
 import Post from "../components/Post/Post";
 import * as React from "react";
-import Seo from "../components/Seo";
+import { Seo } from "../components/Seo";
 
 const ArticlePage = ({ data }: any) => {
   const article = data.strapiArticle;
   const cover = getImage(article?.thumbnail?.localFile?.childImageSharp);
   const imagePreviewArray = article?.image_preview;
   const content = article?.content?.data?.childMarkdownRemark.html;
+  const seo = article.seo;
   return (
     <>
-      <Seo seo={{ metaTitle: article.title }} />
+      <Seo title={seo.metaTitle} description={seo.metaDescription} />
       <Layout>
         <Post
           slug={article.slug}

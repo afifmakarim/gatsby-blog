@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql, Link, PageProps } from "gatsby";
 import Layout from "../components/Layout";
-import Seo from "../components/Seo";
+import { Seo } from "../components/Seo";
 import Article from "../components/Article/Article";
 import Aside from "../components/Aside/Aside";
 export const query = graphql`
@@ -59,4 +59,4 @@ const IndexPage: React.FC<PageProps> = ({ data }) => {
 
 export default IndexPage;
 
-export const Head = () => <Seo seo={{ metaTitle: "Home" }} />;
+export const Head = () => <Seo title="Home" />;
