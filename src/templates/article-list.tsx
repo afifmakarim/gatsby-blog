@@ -10,7 +10,7 @@ import { getImage } from "gatsby-plugin-image";
 export const query = graphql`
   query ArticleList($limit: Int!, $skip: Int!) {
     allStrapiArticle(
-      sort: { fields: createdAt, order: DESC }
+      sort: { fields: publishedAt, order: DESC }
       limit: $limit
       skip: $skip
     ) {

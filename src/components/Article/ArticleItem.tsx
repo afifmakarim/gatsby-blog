@@ -30,7 +30,7 @@ export default function ArticleItem({
         <h1 className="block mt-2 text-lg leading-tight font-medium text-black truncate">
           {title}
         </h1>
-        <p className="mt-2 text-slate-500 break-words h-28">
+        <p className="mt-2 text-slate-500 break-words h-36">
           {description.slice(0, 100) + (description.length > 100 ? "..." : "")}
         </p>
         <div className="">

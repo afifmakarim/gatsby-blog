@@ -1,4 +1,4 @@
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
@@ -13,10 +13,6 @@ export default function Post({
   timestamp,
   slug,
 }: any) {
-  // const contentParse = content.replaceAll(
-  //   "/uploads",
-  //   "http://localhost:1337/uploads"
-  // );
   return (
     <div className="max-w-6xl mx-auto p-5">
       <Breadcrumbs title={title} />
@@ -41,9 +37,8 @@ export default function Post({
           ))}
         </div>
       </header>
-      <section id="article-post">
+      <section id="article-post" className="prose ">
         <div
-          className="break-words whitespace-pre"
           dangerouslySetInnerHTML={{
             __html: content,
           }}
@@ -51,9 +46,9 @@ export default function Post({
       </section>
       <div className="mt-8 flex justify-between border-t-2 py-8">
         <div className="flex items-center gap-4">
-          <img
-            className="shrink-0 h-16 w-16 rounded-full"
-            src="https://via.placeholder.com/150"
+          <StaticImage
+            className="shrink-0 h-16 w-16 object-scale-down	"
+            src="../images/brainlessprogrammer.jpg"
             alt="author"
           />
           <div className="flex flex-col gap-1">
@@ -62,15 +57,16 @@ export default function Post({
           </div>
         </div>
         <div className="flex items-center gap-2">
+          <p className="mr-2">Share</p>
           <a
-            href={`https://twitter.com/intent/tweet?text=rojoinferno.com/article/${slug}`}
+            href={`https://twitter.com/intent/tweet?text=${process.env.GATSBY_BASE_URL}/article/${slug}`}
             target="_blank"
             className="px-4 py-2 border bg-primaryTheme hover:bg-primaryHover rounded-md shadow-md ease-in duration-200"
           >
             <FaTwitter className="text-white" />
           </a>
           <a
-            href={`https://www.facebook.com/sharer/sharer.php?u=rojoinferno.com/article/${slug}`}
+            href={`https://www.facebook.com/sharer/sharer.php?u=${process.env.GATSBY_BASE_URL}/article/${slug}`}
             target="_blank"
             className="px-4 py-2 border bg-primaryTheme hover:bg-primaryHover rounded-md shadow-md ease-in duration-200"
           >

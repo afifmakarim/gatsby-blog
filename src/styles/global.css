@@ -19,7 +19,4 @@
     #article-post img{
         @apply my-4
     }
-    ol, ul {
-        @apply list-decimal ml-6	
-    }
 }

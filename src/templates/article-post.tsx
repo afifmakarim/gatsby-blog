@@ -12,6 +12,7 @@ const ArticlePage = ({ data }: any) => {
   const content = article?.content?.data?.childMarkdownRemark.html;
   return (
     <>
+      <Seo seo={{ metaTitle: article.title }} />
       <Layout>
         <Post
           slug={article.slug}
@@ -44,6 +45,7 @@ export const pageQuery = graphql`
           content
           childMarkdownRemark {
             html
+            rawMarkdownBody
           }
         }
       }
@@ -68,4 +70,4 @@ export const pageQuery = graphql`
 
 export default ArticlePage;
 
-export const Head = () => <Seo seo={{ metaTitle: "Post" }} />;
+// export const Head = () => <Seo seo={{ metaTitle: "Post" }} />;

@@ -106,13 +106,15 @@ export default function Navigation() {
             </Popover.Group>
             <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
               <a
-                href="#"
+                target="_blank"
+                href="https://www.youtube.com/@brainlessprogrammer5161"
                 className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
               >
                 <FaYoutube className="text-primaryTheme" />
               </a>
               <a
-                href="#"
+                target="_blank"
+                href="https://github.com/afifmakarim"
                 className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-primaryTheme px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-primaryHover"
               >
                 <FaGithub />
