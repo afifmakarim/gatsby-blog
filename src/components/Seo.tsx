@@ -141,7 +141,7 @@ export const Seo = ({ title, description, pathname, children }: any) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
-      <link rel="icon" type="image/jpg" href={seo.image} sizes="16x16" />
+      <link rel="icon" type="image/png" href={seo.image} sizes="16x16" />
 
       {children}
     </>
